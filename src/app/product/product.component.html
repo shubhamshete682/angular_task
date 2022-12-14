@@ -1,0 +1,19 @@
+<div class="container">
+    <h1 class="text-center">Products</h1>
+    <br>
+    <div *ngIf="proData.length>0 else elsepart">
+    <div class="row">
+        <div class="col-md-4 my-4" *ngFor="let pro of proData">
+            <div class="card text-center" style="width:22rem; border-style:solid; border-width:medium; border-color:black;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpJBYNtZ1wnIkLdHlmgU2sWdrCQcLzcR8RZw&usqp=CAU" class="card-img-top">
+                <div class="card-body">
+                    <h3 class="card-title">{{pro.name}}</h3><br>
+                    <h5 class="card-title">{{pro.price}}</h5>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <ng-template #elsepart>Product not found</ng-template>
+</div>
